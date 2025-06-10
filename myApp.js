@@ -9,12 +9,14 @@ const publicPath = path.join( __dirname, 'public'
 );
 app.get("/" , (req , res) => {
   res.sendFile(absolutePath);
-  
+
 });
 
 app.use('/public',express.static(publicPath));
 
-
+app.get('/json', (req,res) => {
+  res.json({"message": "Hello json"});
+}); 
 
 
 
