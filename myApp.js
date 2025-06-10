@@ -9,6 +9,7 @@ const publicPath = path.join( __dirname, 'public'
 );
 app.get("/" , (req , res) => {
   res.sendFile(absolutePath);
+  
 });
 
 app.use('/public',express.static(publicPath));
